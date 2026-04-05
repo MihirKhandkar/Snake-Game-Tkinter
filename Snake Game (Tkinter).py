@@ -78,7 +78,7 @@ def next_turn():
 
     new_head = (head_x, head_y)
 
-    if new_head[0] < 0 or new_head[0] > WIDTH or new_head[1] < 0 or new_head[1] > HEIGHT:
+    if new_head[0] < 0 or new_head[0] >= WIDTH or new_head[1] < 0 or new_head[1] >= HEIGHT:
         gameover()
         return
     elif new_head in snake[1:]:
